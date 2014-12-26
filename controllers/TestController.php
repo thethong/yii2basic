@@ -10,7 +10,7 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 include '../common/Lang.php';
 
-class SiteController extends Controller
+class TestController extends Controller
 {
     public function behaviors()
     {
@@ -54,7 +54,6 @@ class SiteController extends Controller
     		$lang = \Lang::getLang($_GET ['lang']);
     	else 
     		$lang = \Lang::getLang(null);
-    	
         return $this->render('index',array(
             							'lang'=>$lang,
             ));
